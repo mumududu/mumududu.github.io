@@ -46,16 +46,16 @@
   };
 </script>
 
-  <meta name="description" content="目的计算出有向图的强关联：存在 v -&gt; w的路径，同时存在 w-&gt; v的路径，我的理解是存在平行边或者组成一个环的集合称为一个强关联。 步骤 使用reversePost得出图形的拓扑排序 反转图形，再通过拓扑排序的顺序使用深度搜索检查反向图的元素，每组都给定一个编号，直到栈中所有元素遍历完成为止。">
+  <meta name="description" content="目的计算出有向图的强连通分量：存在 v -&gt; w的路径，同时存在 w-&gt; v的路径，我的理解是存在平行边或者组成一个环的集合称为一个强关联。 步骤 使用reversePost得出图形的拓扑排序 反转图形，再通过拓扑排序的顺序使用深度搜索检查反向图的元素，每组都给定一个编号，直到栈中所有元素遍历完成为止。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用深度搜索计算有向图的强关联">
+<meta property="og:title" content="使用深度搜索计算有向图的强连通分量">
 <meta property="og:url" content="http:&#x2F;&#x2F;idordor.tk&#x2F;2019&#x2F;12&#x2F;21&#x2F;strong-component&#x2F;index.html">
 <meta property="og:site_name" content="mumu的空间">
-<meta property="og:description" content="目的计算出有向图的强关联：存在 v -&gt; w的路径，同时存在 w-&gt; v的路径，我的理解是存在平行边或者组成一个环的集合称为一个强关联。 步骤 使用reversePost得出图形的拓扑排序 反转图形，再通过拓扑排序的顺序使用深度搜索检查反向图的元素，每组都给定一个编号，直到栈中所有元素遍历完成为止。">
+<meta property="og:description" content="目的计算出有向图的强连通分量：存在 v -&gt; w的路径，同时存在 w-&gt; v的路径，我的理解是存在平行边或者组成一个环的集合称为一个强关联。 步骤 使用reversePost得出图形的拓扑排序 反转图形，再通过拓扑排序的顺序使用深度搜索检查反向图的元素，每组都给定一个编号，直到栈中所有元素遍历完成为止。">
 <meta property="article:published_time" content="2019-12-21T02:09:40.000Z">
-<meta property="article:modified_time" content="2019-12-21T02:16:29.824Z">
+<meta property="article:modified_time" content="2019-12-21T02:44:58.162Z">
 <meta property="article:author" content="mumu">
-<meta property="article:tag" content="深度搜索 强关联">
+<meta property="article:tag" content="深度搜索 强连通分量">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://idordor.tk/2019/12/21/strong-component/">
@@ -72,7 +72,7 @@
   };
 </script>
 
-  <title>使用深度搜索计算有向图的强关联 | mumu的空间</title>
+  <title>使用深度搜索计算有向图的强连通分量 | mumu的空间</title>
   
 
 
@@ -184,7 +184,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          使用深度搜索计算有向图的强关联
+          使用深度搜索计算有向图的强连通分量
         </h1>
 
         <div class="post-meta">
@@ -195,7 +195,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2019-12-21 10:09:40 / 修改时间：10:16:29" itemprop="dateCreated datePublished" datetime="2019-12-21T10:09:40+08:00">2019-12-21</time>
+              <time title="创建时间：2019-12-21 10:09:40 / 修改时间：10:44:58" itemprop="dateCreated datePublished" datetime="2019-12-21T10:09:40+08:00">2019-12-21</time>
             </span>
 
           
@@ -209,7 +209,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p>计算出有向图的强关联：存在 v -&gt; w的路径，同时存在 w-&gt; v的路径，我的理解是存在平行边或者组成一个环的集合称为一个强关联。</p>
+        <h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p>计算出有向图的强连通分量：存在 v -&gt; w的路径，同时存在 w-&gt; v的路径，我的理解是存在平行边或者组成一个环的集合称为一个强关联。</p>
 <h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><ol>
 <li>使用reversePost得出图形的拓扑排序</li>
 <li>反转图形，再通过拓扑排序的顺序使用深度搜索检查反向图的元素，每组都给定一个编号，直到栈中所有元素遍历完成为止。</li>
@@ -223,7 +223,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E6%B7%B1%E5%BA%A6%E6%90%9C%E7%B4%A2-%E5%BC%BA%E5%85%B3%E8%81%94/" rel="tag"># 深度搜索 强关联</a>
+              <a href="/tags/%E6%B7%B1%E5%BA%A6%E6%90%9C%E7%B4%A2-%E5%BC%BA%E8%BF%9E%E9%80%9A%E5%88%86%E9%87%8F/" rel="tag"># 深度搜索 强连通分量</a>
           </div>
 
         
